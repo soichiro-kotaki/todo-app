@@ -11,6 +11,9 @@
 # production
 /build
 
+# public
+/public
+
 # misc
 .DS_Store
 .env.local
@@ -21,3 +24,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# firebase
+.firebaserc
+.firebase.json
+
+# default files in create react app
+App.test.tsx
+react-app-env.d.ts
+setupTests.ts
+reportWebVital.ts
+
+
+

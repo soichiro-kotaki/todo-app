@@ -103,6 +103,7 @@ export const SignIn: React.FC = (props: any) => {
             variant="contained"
             color="primary"
             className={classes.button}
+            disabled={!email || !password}
             onClick={ isSignIn ?
                 async () => {
                     try {
@@ -110,6 +111,8 @@ export const SignIn: React.FC = (props: any) => {
                         props.history.push('/')
                     } catch(error) {
                         alert(error.message);
+                        setEmail('');
+                        setPassword('');
                     }
             } : async () => {
                     try {
@@ -117,6 +120,8 @@ export const SignIn: React.FC = (props: any) => {
                         props.history.push('/')
                     } catch(error) {
                         alert(error.message);
+                        setEmail('');
+                        setPassword('');
                     }
             }}
           >
